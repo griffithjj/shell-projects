@@ -1,5 +1,5 @@
 #!/bin/bash
-#Filename: liquibase-guest
+#Filename: liquibase-wrapper-dotnet
 #Description: Pulls Liquibase config values from dotnet user secrets and runs liquibase command
 
 if [ $# -lt 1 ]; then
@@ -66,7 +66,7 @@ if [[ "$username" != "null" && "$password" != "null" && "$url" != "null" ]]; the
   exit 0
 fi
 
-project="../GuestExperience.Store.Postgres.csproj"
+project="../*.csproj"
 
 secretsFile="liquibase.$contextFilter.secrets"
 
